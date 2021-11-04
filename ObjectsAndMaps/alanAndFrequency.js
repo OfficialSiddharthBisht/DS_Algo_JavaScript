@@ -4,9 +4,20 @@
 sidd        i-1
             d-2
 */
-function alanFrequency(N, string) {
+function alanFrequency(N, str) {
     //write code here
     let obj={};
+            // code so that the key value will always be in alphabetical order 
+   let alpha = "abcdefghijklmnopqrstuvwxyz";
+  let string = "";
+  for (let i = 0; i < alpha.length; i++) {
+    for (let j = 0; j < str.length; j++) {
+      if (alpha[i] === str[j]) {
+        string += alpha[i];
+      }
+    }
+  }
+   //---------------
     for(let i=0;i<N;i++)
     {
         if(obj[string[i]]!==undefined)

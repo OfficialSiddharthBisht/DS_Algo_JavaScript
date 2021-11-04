@@ -9,7 +9,7 @@ Input
 -------------
 Output
 4 3 2 1 5 6 7 8 12 11 10 9
-note - the image of the question is - 
+note - the image of the question is - https://github.com/OfficialSiddharthBisht/DS_Algo_JavaScript/blob/master/multiDimArr/traverseDownToUp.png
 */
 function traverseDownToUp(N, M, matrix){
     //write code here

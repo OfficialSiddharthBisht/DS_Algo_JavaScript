@@ -11,56 +11,53 @@
 */
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n");
-    let testCases=input[0];
-    let lines=1;
-    for(let i=0;i<testCases;i++)
-    {
-        let N=+input[lines];
+    input = input.trim().split("\n");
+    let testCases = input[0];
+    let lines = 1;
+    for (let i = 0; i < testCases; i++) {
+        let N = +input[lines];
         lines++;
-        let arr=input[lines].trim().split(" ").map(Number);
+        let arr = input[lines].trim().split(" ").map(Number);
         lines++;
-        digitSumArr(N,arr);
+        digitSumArr(N, arr);
     }
-  }
-  function digitSumArr(N,arr) {
-      let ans="";
-      for(let i=0;i<N;i++)
-      {
-        ans+=sumOfDigits(arr[i])+" ";
-      }
-      console.log(ans);
-  }
-  function sumOfDigits (num) {
-      let sum=0;
-      while(num>0)
-      {
-        sum=sum+(num%10);
-        num=Math.floor(num/10);
-      }
-      return sum;
-  }
-  if (process.env.USER === "siddharth") {
+}
+function digitSumArr(N, arr) {
+    let ans = "";
+    for (let i = 0; i < N; i++) {
+        ans += sumOfDigits(arr[i]) + " ";
+    }
+    console.log(ans);
+}
+function sumOfDigits(num) {
+    let sum = 0;
+    while (num > 0) {
+        sum = sum + (num % 10);
+        num = Math.floor(num / 10);
+    }
+    return sum;
+}
+if (process.env.USER === "siddharth") {
     runProgram(`2
     5
     12 14 16 17 29
     6
     1 2 3 4 5 51`);
-  } else {
+} else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
     let read = "";
     process.stdin.on("data", function (input) {
-      read += input;
+        read += input;
     });
     process.stdin.on("end", function () {
-      read = read.replace(/\n$/, "");
-      read = read.replace(/\n$/, "");
-      runProgram(read);
+        read = read.replace(/\n$/, "");
+        read = read.replace(/\n$/, "");
+        runProgram(read);
     });
     process.on("SIGINT", function () {
-      read = read.replace(/\n$/, "");
-      runProgram(read);
-      process.exit(0);
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+        process.exit(0);
     });
-  }
+}

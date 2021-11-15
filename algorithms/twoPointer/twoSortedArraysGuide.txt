@@ -1,0 +1,76 @@
+Two Sorted Arrays - Editorial
+Difficulty: Low
+Prerequisite: Two Pointers
+Problem Statement:
+We are given two sorted arraysAandB, such thatAis sorted in ascending order whileBis sorted in descending order. We have to find the number of elements common in both the arrays
+
+Hint:
+How can you make use of the fact that the first array is sorted in ascending order, while the second array is sorted in descending order
+
+Short Explaination
+In this question, we are given two sorted arrays such that the first array is sorted in ascending order, while the second array is sorted in descending order. We have to find the number of elements common in both the arrays. A brute force approach would be to fix one element in the first array, and then try to search for that particular element in the second array. The time complexity of the solution will beO(N^2). But, a better solution would be two keep two pointers starting from the left of the first array, and another starting from the right of the second array, such that we check for equality of the values indicated by the left and right pointer. If they are equal, left pointer move towards the right, while the right pointer move towards the left. If the value indicated by the left pointer is greater than the value indicated by the right pointer, the right pointer is moved towards the left side, else the left pointer is moved to the right side. We keep track of the count of the number of instances such that the value indicated by the left and right pointer is same.
+
+Detailed Explanation:
+In this question, we are given two sorted arraysAandB, such thatAis sorted in ascending order, whileBis sorted in descending order, and we have to find the number of elements common in both the arrays
+
+A brute force approach would be to fix one element in the first array, and then try to search for that particular element in the second array. The time complexity of the solution will beO(N^2)
+
+We can make use of the fact that the the first array is sorted, and the second one is reverse sorted.
+
+We can keep two pointers starting from the left of the first array, and another starting from the right of the second array, such that we check for equality of the values indicated by the left and right pointer.
+
+If they are equal, left pointer move towards the right, while the right pointer move towards the left. If the value indicated by the left pointer is greater than the value indicated by the right pointer, the right pointer is moved towards the left side, else the left pointer is moved to the right side.
+
+We keep track of the count of the number of instances such that the value indicated by the left and right pointer is same, which will be our final answer
+
+For example, consider the test case 
+
+A ->  1 2 2 3 4 5
+B ->  4 4 3 2 1 1
+
+count = 0
+
+Initially the value of left = 0 (pointing at the first element of A) and right = 5 (pointing at last element of B)
+
+When left is compared with right, we can observe that the value of left is equal to right, so we increment the value of count, and both the pointers move accordingly (count = 1, left = 1, right = 4)
+
+In the second iteration, the value indicated by left is 2, while that indicated by right is 1, so we have to move the right pointers towards left in this case, since the second array is reversed sorted (count = 1, left = 1, right = 3)
+
+In the third iteration, the value indicated by the left and right is 2, so we increment the count, and the both the pointers move accordingly (count = 2, left = 2, right = 2)
+
+In the fourth iteration, the value indicated by left is 2, while that indicated by right is 3, so we move the left pointer towards the right (count = 2, left = 3, right = 2)
+
+In the fifth iteration,the value indicated by left and right is 3, so we increment the count, and both the pointers move accordingly (count = 3, left = 4, right = 1)
+
+In the sixth iteration, the value indicated the value indicated by the left and the right pointer is 4, therefore, we increment the count, and the pointers are moved accordingly (count = 4, left = 5, right = 0)
+
+In the seventh iteration, the value indicated by the left pointer is greater than the value indicated by the right pointer, so we move the right pointer towards left (count = 4, left = 5, right = -1)
+
+At this point, we stop since the right pointer has gone out of bounds. Hence, the number of elements common in both the arrays become 4, the value of count
+
+Pseudo Code:
+function twoSortedArrays(arr1, arr2){
+         left = 0;
+         right = arr1.length-1;
+         count = 0;
+         while(left < arr1.length && right >= 0){
+            if (arr1[left] < arr2[right]) left++;
+            else if (arr1[left] > arr2[right]) right--;
+            else{
+                count++;
+                left++;
+                right--;
+            }
+        }
+        return count;
+}
+
+Time Complexity:
+Both the pointers traverse the entire array simultaneously, therefore, the time complexity will beO(N), where N is the size of the array
+
+Space Complexity:
+No extra space is required, therefore, the space complexity will beO(1)
+
+Alternate Solution:
+All the values in the two arrays can be put in two separate key value pairs, such that number of common elements, will be minimum frequency of individual elements in the two arrays
+

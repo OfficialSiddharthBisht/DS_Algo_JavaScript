@@ -1,0 +1,20 @@
+Function : A block of code which have some specific name and whenever that name is called the block of code executes.
+
+Recursive Function - Simple Defination - A function that calls itself or A problem that is defined in terms of itself .
+
+Iterative Function - All the functions which are not Recursive are Iterative functions.
+
+Base Condition - A condition which when not present then our program can lead us to infinity . Also know as terminating condition . The ultimate goal of our Recursive function is to reach to the base condition.
+
+State Of A Function - 
+Suppose we have a function -
+
+function sum(a,b){
+    return a+b;
+}
+
+sum(3,8);   // returns 11
+sum(10,20); // returns 30
+
+Although the instructions that will we performed in both the function are same but the data on which the instructions are performed are different.
+Therefore the state of the function is dependent on the data on which the operations are performed.

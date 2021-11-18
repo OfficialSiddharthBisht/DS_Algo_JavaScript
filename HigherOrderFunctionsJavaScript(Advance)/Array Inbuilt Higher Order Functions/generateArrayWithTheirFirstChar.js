@@ -2,7 +2,7 @@
 Sample Input - ["Masai","School"]
 Sample Output - ["M","S"]
 */
-let arr=["Masai","School"];
+let arr=["Siddharth","Bisht"];
 let newArr=arr.map(function(element){
     return element[0];
 })

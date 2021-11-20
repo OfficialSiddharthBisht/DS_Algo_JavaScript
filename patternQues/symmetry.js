@@ -1,6 +1,4 @@
-/*Check for Symmetry Ended
-Description
-
+/*Check for Symmetry
 You are given a square matrix of size n. Rows are indexed 1 to n from top to bottom and columns are indexed 1 to n form left to right. Matrix consists of only '*' and '.'. You need to check whether matrix is symmetric or not. if it is, check it is symmetric about vertical axis or horizontal axis or both.
 
 A matrix is said to be symmetric about horizontal axis if 1st row is identical to n-th row, 2nd is identical to (n-1)th row and so on.

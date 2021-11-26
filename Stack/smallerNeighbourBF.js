@@ -45,7 +45,8 @@ function runProgram(input) {
     let arr = input[1].trim().split(" ").map(Number);
     smallerNeighboutBF(N, arr);
 }
-
+//* Solve by Bruteforce but time complexity is O(N*N) and space O(N).
+// Better Approach - using stacks 
 function smallerNeighboutBF(N, arr) {
     let output = [];
     for (let i = 0; i < N; i++) {

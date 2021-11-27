@@ -1,0 +1,16 @@
+Queues are linear data structures, where data is stored and operated as per FIFO method, where FIFO stands for First in First out or Last In Last Out LILO.
+
+FIFO method focusses on retrieving the oldest data that has been put into the queue.
+
+The point at which data is inserted into the queue is called REAR.
+
+The point from which data is removed from the queue is called FRONT.
+
+Basic operations associated with queues :
+
+1. Enqueue() - Adding data at the REAR of queue .
+2. Dequeue() - Removing data from the FRONT of queue.
+
+If the queue is full then no element can be enqueued further. This condition is called "Overflow"
+
+If the queue is empty then no element can be dequeued. This condition is called "Underflow".

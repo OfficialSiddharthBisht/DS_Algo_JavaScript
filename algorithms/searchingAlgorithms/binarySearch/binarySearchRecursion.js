@@ -34,11 +34,13 @@ function binarySearch(N, target, arr, start, end) {
     if (arr[middle] === target) {
         return middle; //returns the index of the element
     }
-    if (target < arr[middle]) {
-       return binarySearch(N, target, arr, start, middle - 1); //end will change to middle
-    }
+    //* 2 Greater then the target
     if (target > arr[middle]) {
-       return binarySearch(N, target, arr, middle + 1, end); //start will change to middle
+        return binarySearch(N, target, arr, middle + 1, end); //start will change to middle
+    }
+    //* 3 Less then the target
+    if (target < arr[middle]) {
+        return binarySearch(N, target, arr, start, middle - 1); //end will change to middle
     }
 }
 

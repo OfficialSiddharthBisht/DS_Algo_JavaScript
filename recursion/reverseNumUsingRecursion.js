@@ -28,4 +28,4 @@ function runProgram(input) {
     let N = parseInt(input);
     console.log(reverseNum(N));
 }
-runProgram(`12345`);
+runProgram(`123645`);

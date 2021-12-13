@@ -4,21 +4,21 @@ Input Format :-
 First line contains N , the number of elements in the array followed by the items in the array in the next line.
 
 Output Format :-
-Print Yes if the array is sorted else print No .
+Print true if the array is sorted else print false .
 
 Input 1 :-
 5
 1 2 3 4 5
 
 Output 1 :-
-Yes
+true
 
 Input 2 :-
 5
 1 4 6 3 5
 
 Output 2 :-
-No
+false
 */
 function isArrSorted(N, arr, index = 0) {
     if (index === N) {

@@ -14,7 +14,7 @@ Output :-
 60
 
 Hint :-
-* 1*3*4*2=24
+1 * 3 * 4 * 2 = 24
 Therefore Ouptut is 60
 */
 function productOfDigits(N) {

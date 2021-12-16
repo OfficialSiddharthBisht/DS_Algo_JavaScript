@@ -13,7 +13,7 @@
     6 5 9 8 1
 
     Output :-
-    1 5 6 8 9
+    [1, 5, 6, 8, 9]
 */
 function bubbleSortRecursion(N, arr) {
     if (N === 1) {

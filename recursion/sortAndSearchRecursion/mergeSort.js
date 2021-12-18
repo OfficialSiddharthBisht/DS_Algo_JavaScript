@@ -1,4 +1,4 @@
-
+// Given an unsorted array , sort the array with the help of merge sort
 let arr = [6, 3, 9, 5, 2, 8, 7, 1];
 function mergeSort(arr) {
     if (arr.length ===1) {

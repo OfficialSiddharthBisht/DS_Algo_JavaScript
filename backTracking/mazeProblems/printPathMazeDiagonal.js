@@ -1,4 +1,4 @@
-/* Given a maze of N X M where N is the number of rows and M is the number of columns . Assume that there is no obsticle . Count the number of paths from which you can reach to the target from starting position . You can either go horizontally and vertically 
+/* Given a maze of N X M where N is the number of rows and M is the number of columns . Assume that there is no obsticle . Count the number of paths from which you can reach to the target from starting position , you can go horizontal , vertical as well as diagonally
 ____________________
 |start|     |       |
 |-----|-----|-------|
@@ -15,9 +15,16 @@ The count of possible ways we can reach from start to end .
 3 3
 
 *Output
+Diagonal Diagonal 
+Diagonal Down  Right 
+Diagonal Right Down  
+Down  Diagonal Right 
 Down  Down  Right Right 
+Down  Right Diagonal 
 Down  Right Down  Right 
 Down  Right Right Down  
+Right Diagonal Down  
+Right Down  Diagonal 
 Right Down  Down  Right 
 Right Down  Right Down  
 Right Right Down  Down  
@@ -26,6 +33,9 @@ function printPathsInMaze(ans, row, col) {
     if (row === 1 && col === 1) {
         console.log(ans);
         return;
+    }
+    if (row > 1 && col > 1) {
+        printPathsInMaze(ans + "Diagonal ", row - 1, col - 1);
     }
     if (row > 1) {
         printPathsInMaze(ans + "Down  ", row - 1, col);

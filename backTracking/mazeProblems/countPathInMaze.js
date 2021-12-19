@@ -1,4 +1,4 @@
-/* Given a maze of N X M where N is the number of rows and M is the number of columns . Assume that there is no obsticle . Count the number of paths from which you can reach to the target from starting position
+/* Given a maze of N X M where N is the number of rows and M is the number of columns . Assume that there is no obsticle . Count the number of paths from which you can reach to the target from starting position  You can either go horizontally and vertically .
 ____________________
 |start|     |       |
 |-----|-----|-------|

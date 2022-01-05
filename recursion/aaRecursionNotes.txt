@@ -1,3 +1,4 @@
+Notes : -
 Function : A block of code which have some specific name and whenever that name is called the block of code executes.
 
 Recursive Function - Simple Defination - A function that calls itself or A problem that is defined in terms of itself .

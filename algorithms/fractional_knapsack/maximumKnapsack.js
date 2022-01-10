@@ -38,4 +38,4 @@ function fractional_knapsack(n, weights, capacity, profits) {
     return max;
 }
 
-console.log(fractional_knapsack(3, [10, 20, 30], 50, [60, 100, 120]));
+console.log(fractional_knapsack(3, [10, 20, 30], 50, [60, 100, 120])); // expected output 240

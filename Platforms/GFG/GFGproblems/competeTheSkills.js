@@ -2,6 +2,9 @@
 ? Compete The Skills 
 Problem Link : - https://practice.geeksforgeeks.org/problems/compete-the-skills5807/1/?problemStatus=unsolved&problemType=functional&difficulty[]=-2&page=5&sortBy=submissions&query=problemStatusunsolvedproblemTypefunctionaldifficulty[]-2page5sortBysubmissions
 -------------------------------------------------------
+
+Solution Link : - https://youtu.be/BKbGrQQaUwM
+
 A and B are good friend and programmers. They are always in a healthy competition with each other. They decide to judge the best among them by competing. They do so by comparing their three skills as per their values. Please help them doing so as they are busy.
 
 Set for A are like [a1, a2, a3]

@@ -33,7 +33,7 @@ function fabonacci(N, sum, obj = {}) {
         return obj[N];
     }
     obj[N] = fabonacci(N - 1, sum, obj) + fabonacci(N - 2, sum, obj);
-    sum += fabonacci(N - 1, sum, obj) + fabonacci(N - 2, sum, obj);
+    sum += obj[N]; //fabonacci(N - 1, sum, obj) + fabonacci(N - 2, sum, obj);
     return sum;
 }
 function runProgram(input) {

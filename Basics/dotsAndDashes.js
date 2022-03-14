@@ -1,8 +1,8 @@
-/*You are given a number stored in a variable with the nameN
+/*You are given a number stored in a variable with the name N
 
-Print the required pattern, such that for all numbers in the range[1, N], includingN, if the number is odd, print a single_, else printN*without space, on a new line
+Print the required pattern, such that for all numbers in the range[1, N], including N, if the number is odd, print a single _ , else print N * without space, on a new line
 
-For example, consider the value stored inN = 5. Therefore, the required output is
+For example, consider the value stored in N = 5. Therefore, the required output is
 
 _
 *****
@@ -10,6 +10,7 @@ _
 *****
 _
 */
+
 function dotsAndDashes(N) {
     // Write code here
      let dots="";

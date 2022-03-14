@@ -1,4 +1,24 @@
 /* Given a 2d array arr with N rows and M columns for all columns print the sum of even numbers present in the column*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function runProgram(input) {
     // Write code here
     input=input.trim().split("\n");

@@ -1,4 +1,4 @@
-/* Given a string s , to write a program that count  the number of consonants (n-one vowel characters) presentin the string.
+/* Given a string s , to write a program that count  the number of consonants (n-one vowel characters) present in the string.
  */
 function countConsonants(s) {
     //write code here

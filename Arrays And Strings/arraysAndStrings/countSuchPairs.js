@@ -1,5 +1,5 @@
 /* Given an array A of N integers along with a target integer K.
-Task is to find out the number of pairs of integers present in the array whose sum is equeal to the target value K.
+Task is to find out the number of pairs of integers present in the array whose sum is equal to the target value K.
 */
 function countSuchPairs(N,K,A)
 {

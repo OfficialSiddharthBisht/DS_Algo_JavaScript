@@ -1,4 +1,4 @@
-/*You are given a string stored in a variablestr, and the length of the string is stored in a variable with the nameN
+/*You are given a string stored in a variable str, and the length of the string is stored in a variable with the nameN
 
 The value stored inNwill always be even
 

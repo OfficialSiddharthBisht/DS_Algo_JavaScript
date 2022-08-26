@@ -1,5 +1,5 @@
 /*
-String a string S fo all lowercase letters and each letter has a value of its own.
+Given a string S in all lowercase letters and each letter has a value of its own.
 The value of the alphabet a is 1,b is 2 , c is 3 till z is 26.
 Now I have to find the total value of the given string. The total value of a string is the sum of values of all characters present in string.
 */

@@ -1,4 +1,4 @@
-/* Given an array arr , containing N integers. To find the sum array for the given arrray. The digit sum array for a given array arr , contains the sum of digits present in a given number , stored at the corresponding index in arr.
+/* Given an array arr , containing N integers. To find the sum array for the given array. The digit sum array for a given array arr , contains the sum of digits present in a given number , stored at the corresponding index in arr.
 ? Input
 2
 5
@@ -6,7 +6,7 @@
 6
 1 2 3 4 5 51
 ? Output
-9 5 7 8 11
+3 5 7 8 11
 1 2 3 4 5 6
 */
 function runProgram(input) {
@@ -37,7 +37,7 @@ function sumOfDigits(num) {
     }
     return sum;
 }
-if (process.env.USER === "siddharth") {
+if (process.env.USERNAME === "offic") {
     runProgram(`2
     5
     12 14 16 17 29

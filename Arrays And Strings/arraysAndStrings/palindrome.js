@@ -1,5 +1,5 @@
 /* Given an integer num.
-Pint yes if that integer is a palindrome or else print no
+Print yes if that integer is a palindrome or else print no
 */
 function isPalindrome(num)
 {

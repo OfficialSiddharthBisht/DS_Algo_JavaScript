@@ -1,5 +1,5 @@
 /*
-You are given an array, stored in a variable with the namearray
+You are given an array, stored in a variable with the name array
 The size of the array is stored in a variable with the name N
 You are also given another number stored in a variable with the name K
 Print the output according to the following conditions

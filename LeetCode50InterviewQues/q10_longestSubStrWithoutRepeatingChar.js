@@ -1,4 +1,5 @@
-/*
+/* 
+!not fully correct
 *  Longest Substring Without Repeating Characters 
 Given a string, find the length of the longest substring without repeating characters. For 
 example, the longest substring without repeating letters for “abcabcbb” is “abc”, which 
@@ -19,5 +20,5 @@ function longestSubStrWithoutRepeatingChar(str){
     }
     return count;
 }
-console.log(longestSubStrWithoutRepeatingChar("abcabcbb"));
+console.log(longestSubStrWithoutRepeatingChar("bbabcabcbb"));
 console.log(longestSubStrWithoutRepeatingChar("bbbbbbbbbbb"));

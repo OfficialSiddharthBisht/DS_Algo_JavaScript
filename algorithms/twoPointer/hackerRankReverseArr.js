@@ -1,6 +1,6 @@
 /*
 ! Source HackerRank -  https://www.hackerrank.com/challenges/arrays-ds/problem?isFullScreen=true
-An array is a type of data structure that stores elements of the same type in a contiguous block of memory. In an array, , of size , each memory location has some unique index,  (where ), that can be referenced as  or .
+An array is a type of data structure that stores elements of the same type in a contiguous block of memory. In an array, of size , each memory location has some unique index,  (where ), that can be referenced as  or .
 
 Reverse an array of integers.
 
@@ -35,13 +35,13 @@ process.stdin.setEncoding('utf-8');
 let inputString = '';
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
+process.stdin.on('data', function (inputStdin) {
     inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
+process.stdin.on('end', function () {
     inputString = inputString.split('\n');
-     
+
     main();
 });
 
@@ -58,12 +58,12 @@ function readLine() {
 
 function reverseArray(a) {
     // Write your code here
-    let i=0;
-    let j=a.length-1;
-    while(i<=j){
-        let temp=a[i]
-        a[i]=a[j];
-        a[j]=temp;
+    let i = 0;
+    let j = a.length - 1;
+    while (i <= j) {
+        let temp = a[i]
+        a[i] = a[j];
+        a[j] = temp;
         i++;
         j--;
     }

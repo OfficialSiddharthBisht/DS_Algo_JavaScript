@@ -41,56 +41,56 @@ Train Hard Again
 Train Hard Again
 */
 
-function pokemon (N ,ash , gary) {
-    ash = ash.sort(function(a,b){
-        return a - b;
-    });
-    gary = gary.sort(function(a,b){
-        return a - b;
-    });
-    for(let i = 0 ; i < N ;i++){
-        if(ash[i] <= gary[i]){
-            return "Train Hard Again";
-        }
+function pokemon(N, ash, gary) {
+  ash = ash.sort(function (a, b) {
+    return a - b;
+  });
+  gary = gary.sort(function (a, b) {
+    return a - b;
+  });
+  for (let i = 0; i < N; i++) {
+    if (ash[i] <= gary[i]) {
+      return "Train Hard Again";
     }
-    return "Ash Finally Wins";
+  }
+  return "Ash Finally Wins";
 }
 
 function runProgram(input) {
-    // Write code here
-    input = input.trim().split("\n");
-    let testCases = parseInt(input[0]);
-    let line = 1;
-    for(let i = 0;i < testCases; i++){
-        let n = parseInt(input[line++]);
-        let arr1 = input[line++].trim().split(" ").map(Number);
-        let arr2 = input[line++].trim().split(" ").map(Number);
-        console.log(pokemon(n,arr1,arr2));
-    }
+  // Write code here
+  input = input.trim().split("\n");
+  let testCases = parseInt(input[0]);
+  let line = 1;
+  for (let i = 0; i < testCases; i++) {
+    let n = parseInt(input[line++]);
+    let arr1 = input[line++].trim().split(" ").map(Number);
+    let arr2 = input[line++].trim().split(" ").map(Number);
+    console.log(pokemon(n, arr1, arr2));
   }
-  if (process.env.USER === "siddharth") {
-    runProgram(`2
+}
+if (process.env.USER === "siddharth") {
+  runProgram(`2
     3
     12 3 4
     1 1 1
     2
     1 5
     1 4`);
-  } else {
-    process.stdin.resume();
-    process.stdin.setEncoding("ascii");
-    let read = "";
-    process.stdin.on("data", function (input) {
-      read += input;
-    });
-    process.stdin.on("end", function () {
-      read = read.replace(/\n$/, "");
-      read = read.replace(/\n$/, "");
-      runProgram(read);
-    });
-    process.on("SIGINT", function () {
-      read = read.replace(/\n$/, "");
-      runProgram(read);
-      process.exit(0);
-    });
-  }
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}

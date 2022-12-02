@@ -123,3 +123,73 @@
 // }
 // console.log(isPalindrome('maam'));
 
+// Stack implementation by array
+// class Stack {
+//     constructor() {
+//         this.arr = [];
+//         this.top = -1;
+//     }
+
+//     // Methods of stack
+//     push(ele) {
+//         this.top++;
+//         this.arr[this.top] = ele;
+//     }
+//     pop() {
+//         let poppedElement = this.arr[this.top];
+//         if (!poppedElement) {
+//             return null;
+//         }
+//         delete this.arr[this.top];
+//         this.top--;
+//         return poppedElement;
+//     }
+//     peak() {
+//         return this.arr[this.top];
+//     }
+// }
+// let stack = new Stack();
+// stack.push(5);
+// stack.push(6);
+// stack.pop();
+// stack.peak();
+// console.log(stack);
+
+// Brackets match stack problem
+
+// function bracketsMatch(brackets) {
+//     let stack = new Stack();
+//     let N = brackets.length;
+//     for (let i = 0; i < N; i++) {
+//         if (brackets[i] === "(" || brackets[i] === "[" || brackets[i] === "{") {
+//             stack.push(brackets[i]);
+//         } else {
+//             if (brackets[i] === ")" && stack.peak() === "(") {
+//                 stack.pop();
+//             } else if (brackets[i] === "]" && stack.peak() === "[") {
+//                 stack.pop();
+//             } else if (brackets[i] === "}" && stack.peak() === "{") {
+//                 stack.pop();
+//             } else {
+//                 return "not balanced";
+//             }
+//         }
+//     }
+//     if (!stack.peak()) {
+//         return "balanced";
+//     }
+//     return "not balanced"
+// }
+// function runProgram(input) {
+//     input = input.trim().split("\n");
+//     let testCases = parseInt(input[0]);
+//     for (let t = 0; t < testCases; t++) {
+//         console.log(bracketsMatch(input[t + 1]));
+//     }
+// }
+// runProgram(`5
+// {([])}
+// ()
+// ([]
+// }
+// (})`)

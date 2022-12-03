@@ -193,3 +193,69 @@
 // ([]
 // }
 // (})`)
+
+// KVP Question :- how many times an alphabet is repeated count
+// function enigma(N, str) {
+//     let kvp = {};
+//     for (let i = 0; i < N; i++) {
+//         if (!kvp[str[i]]) {
+//             kvp[str[i]] = 1;
+//         } else {
+//             kvp[str[i]]++;
+//         }
+//     }
+//     return kvp;
+// }
+
+// function runProgram(input) {
+//     input = input.trim().split("\n");
+//     let N = parseInt(input[0]);
+//     let str = input[1].trim();
+//     console.log(enigma(N, str));
+// }
+
+
+// runProgram(`4
+// sidd`)
+
+// * Given a string determine if it can be converted into a palindrome
+
+// function canBePalindrome(N, str) {
+//     let kvp = {};
+//     let count = 0;
+//     for (let i = 0; i < N; i++) {
+//         if (!kvp[str[i]]) {
+//             kvp[str[i]] = 1;
+//         } else {
+//             kvp[str[i]]++;
+//         }
+//     }
+//     for (let key in kvp) {
+//         if (kvp[key] % 2 !== 0) {
+//             if (count === 0) {
+//                 count++;
+//             }
+//             if (count > 0) {
+//                 return "Can't be converted into palindrome";
+//             }
+//         }
+//     }
+//     return "Can be converted into palindrome";
+// }
+// function runProgram(input) {
+//     input = input.trim().split("\n").map(Number);
+//     let testCases = parseInt(input[0]);
+//     let line = 1;
+//     for (let t = 0; t < testCases; t++) {
+//         let N = parseInt(input[line++]);
+//         let str = input[line++];
+//         console.log(canBePalindrome(N, str))
+//     }
+// }
+
+// runProgram(`2
+// 6
+// aabbc
+// 5
+// aabcd`)
+

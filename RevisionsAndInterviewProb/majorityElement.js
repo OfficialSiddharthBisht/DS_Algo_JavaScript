@@ -21,117 +21,117 @@ Second line contains the elements.
 */
 
 // *Key Value Pair Solution Time Complexity -> O(N) Space Complexity => O(N)
-function majorityElementKVP(N ,arr){
+function majorityElementKVP(N, arr) {
     let obj = {};
-    for(let i = 0; i < N; i++){
-        if(!obj[arr[i]]){
+    for (let i = 0; i < N; i++) {
+        if (!obj[arr[i]]) {
             obj[arr[i]] = 1;
-        }else{
+        } else {
             obj[arr[i]] = obj[arr[i]] + 1;
         }
     }
     let max = 0;
-    for(let key in obj){
-        if(obj[key] > max){
+    for (let key in obj) {
+        if (obj[key] > max) {
             max = obj[key];
         }
     }
-    if(max > parseInt(N / 2)){
+    if (max > parseInt(N / 2)) {
         return max;
-    }else{
+    } else {
         return "No Majority Element";
     }
 }
 
 // * Bruteforce Solution Time Complexity -> O(N * N) . Space Compexity => O(1)
-function majorityElementBruteforce(N ,arr){
+function majorityElementBruteforce(N, arr) {
     let maxCount = 0;
-    for(let i = 0; i < N; i++){
+    for (let i = 0; i < N; i++) {
         let count = 0;
-        for(let j = 0; j < N; j++){
-            if(arr[i] === arr[j]){
+        for (let j = 0; j < N; j++) {
+            if (arr[i] === arr[j]) {
                 count++;
             }
         }
-        if(count > maxCount){
+        if (count > maxCount) {
             maxCount = count;
         }
     }
-    if(maxCount > parseInt(N / 2)){
+    if (maxCount > parseInt(N / 2)) {
         return maxCount;
-    }else{
+    } else {
         return "No Majority Element";
     }
 }
 //  * Sorting Approach Time Complexity - > O(NlogN) . Space Complexity O(1)
-function majorityElementSorting(N ,arr){
-    arr = arr.sort((a , b)=>{
+function majorityElementSorting(N, arr) {
+    arr = arr.sort((a, b) => {
         return a - b;
     })
     let maxCount = 1;
     let count = 1;
-    for(let i = 0; i < N; i++){
-        if(arr[i] === arr[i + 1]){
+    for (let i = 0; i < N; i++) {
+        if (arr[i] === arr[i + 1]) {
             count++;
-        }else if(arr[i] !== arr[i + 1]){
+        } else if (arr[i] !== arr[i + 1]) {
             count = 1;
         }
-        if(count > maxCount){
+        if (count > maxCount) {
             maxCount = count;
         }
     }
-    if(maxCount > parseInt(N / 2)){
+    if (maxCount > parseInt(N / 2)) {
         return maxCount;
-    }else{
+    } else {
         return "No Majority Element";
     }
 }
 
 // *Sorting And Taking Half Approach. Time Complexity - > O(N + NlogN);
-function majorityElementSortingTakingHalf(N ,arr){
-    arr = arr.sort((a , b) =>{
+function majorityElementSortingTakingHalf(N, arr) {
+    arr = arr.sort((a, b) => {
         return a - b;
     });
     let half = parseInt(N / 2);
-    for(let i = 0; i <= half; i++){
-        if(arr[i] === arr[i + half]){
-            return N -i;
+    for (let i = 0; i <= half; i++) {
+        if (arr[i] === arr[i + half]) {
+            return N - i;
         }
     }
     return "No Majority Element";
 }
 
 // * Using "Moore's Voting Algorithm" to find the majority element.  Time Complexity : O(N) + O(N) =O(N) and Space complexity O(1). 
-function majorityElementMooresVotingAlgorithm(N ,arr){
+function majorityElementMooresVotingAlgorithm(N, arr) {
     // Pass 1
-    let majorityElement = randomK(N , arr);
+    let majorityElement = randomK(N, arr);
     // Pass 2
     let count = 0;
-    for(let i = 0; i < N; i++){
-        if(majorityElement === arr[i]){
-            count ++;
+    for (let i = 0; i < N; i++) {
+        if (majorityElement === arr[i]) {
+            count++;
         }
     }
-    if(count > parseInt(N / 2)){
+    if (count > parseInt(N / 2)) {
         return count;
-    }else{
+    } else {
         return "No Majority Element"
     }
 }
 // A Method of Moore's Voting Algorithm
-function randomK(N ,arr){
+function randomK(N, arr) {
     let majorityElem = 0;
     let count = 1;
-    for(let i = 1; i < N; i++){
-        if(arr[majorityElem] === arr[i]){
+    for (let i = 1; i < N; i++) {
+        if (arr[majorityElem] === arr[i]) {
             count++;
-        }else{
-            count --;
+        } else {
+            count--;
         }
         // 
-        if(count === 0){
+        if (count === 0) {
             majorityElem = i;
-            count = 1; 
+            count = 1;
         }
     }
     return arr[majorityElem];
@@ -146,7 +146,7 @@ Why to use Moore's Voing Algorithm ?
 It gives Time Complexity O(N) and space complexity O(1) best as compared to all the algorithms.
 */
 
-function runProgram(input){
+function runProgram(input) {
     input = input.trim().split("\n");
     let N = parseInt(input[0]);
     let arr = input[1].trim().split(" ").map(Number);
@@ -154,7 +154,7 @@ function runProgram(input){
     // console.log(majorityElementBruteforce(N ,arr));
     // console.log(majorityElementSorting(N ,arr));
     // console.log(majorityElementSortingTakingHalf(N ,arr));
-    console.log(majorityElementMooresVotingAlgorithm(N ,arr));
+    console.log(majorityElementMooresVotingAlgorithm(N, arr));
 }
 
 // * 2 2 3 3 4 4 4 4 4

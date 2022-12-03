@@ -1,15 +1,15 @@
-function numOfWays(N , curr = 0){
-    if(curr === N){
+function numOfWays(N, curr = 0) {
+    if (curr === N) {
         return 1;
     }
-    if(curr > N){
+    if (curr > N) {
         return 0;
     }
-    
-    return numOfWays(N ,curr + 1) + numOfWays(N ,curr + 2) + numOfWays(N ,curr + 5); 
+
+    return numOfWays(N, curr + 1) + numOfWays(N, curr + 2) + numOfWays(N, curr + 5);
 }
 
-console.log(numOfWays(7 , 0));
+console.log(numOfWays(7, 0));
 
 // function numOfWays(N){
 //     if(N === 0){

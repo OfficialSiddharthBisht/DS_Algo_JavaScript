@@ -7,7 +7,7 @@ function factorial(N) {
 }
 
 
-console.log(factorial(3));
+console.log(factorial(10));
 console.log(factorial(5));
 
 

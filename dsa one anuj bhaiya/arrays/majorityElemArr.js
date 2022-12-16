@@ -25,5 +25,27 @@ function majorityElemBF(arr, N) {
     if (maxCount >= Math.floor(N / 2)) {
         return majElem;
     }
+    return -1;
 }
 console.log(majorityElemBF([5, 1, 4, 5, 5], 5));
+
+function majorityElemSorting(arr, N) {
+    arr = arr.sort((a, b) => {
+        return a - b;
+    });
+    let maxCount = 0;
+    let majorityElem = -1;
+    for (let i = 0; i < N - 1; i++) {
+        if (arr[i] === arr[i + 1]) {
+            count++;
+        }
+        if (count > maxCount) {
+            maxCount = count;
+            majorityElem = arr[i];
+        }
+    }
+    if (maxCount >= parseInt(N / 2)) {
+        return majorityElem;
+    }
+    return -1;
+}

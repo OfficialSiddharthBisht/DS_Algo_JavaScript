@@ -75,4 +75,50 @@ function majorityElemKVP(arr, N) {
     }
     return -1;
 }
-console.log(majorityElemSorting([5, 1, 4, 5, 5], 5));
+// console.log(majorityElemSorting([5, 1, 4, 5, 5], 5));
+
+//* Moore's Voting Algorithm
+/*
+5 1 4 1 1
+element frequency
+5           1
+5           0
+1           1
+1           0
+4           1
+4           0
+1           1
+1           2
+at last frequency of 1 is greater then 0,
+then for confirmation, again we loop through the whole array and check the frequency of the answer variable,
+and if the frequency of the answer variable is greater then N / 2 then it is the answer.
+*/
+
+function majorityElemMooresVotingAlgo(arr, N) {
+    let ansIndex = 0;
+    let count = 1;
+    for (let i = 0; i < N; i++) {
+        if (arr[i] === arr[ansIndex]) {
+            count++;
+        } else {
+            count--;
+        }
+        if (count === 0) {
+            ansIndex = i;
+            count = 1;
+        }
+    }
+
+    // checking if the answer index is actually the answer
+    let ele = arr[ansIndex];
+    let tempCount = 0;
+    for (let i = 0; i < N; i++) {
+        if (ele === arr[i]) {
+            tempCount++;
+        }
+    }
+    if (tempCount > parseInt(N / 2)) {
+        return ele;
+    }
+}
+console.log(majorityElemMooresVotingAlgo([5, 1, 4, 1, 1], 5));

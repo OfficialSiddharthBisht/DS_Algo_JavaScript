@@ -55,7 +55,7 @@ let u: undefined = undefined;
 let n: null = null;
 
 // BigInt
-let bigIntNumber: bigint = 9007199254740991n;
+// let bigIntNumber: bigint = 9007199254740991;
 
 // Object
 let user: { name: string; age: number } = { name: "John", age: 30 };
